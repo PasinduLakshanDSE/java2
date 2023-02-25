@@ -1,0 +1,34 @@
+package input;
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class Practise6 {
+	public static void main(String[]args) {
+		Scanner scn= new Scanner(System.in);
+		
+		int [] number= new int[10];
+		for(int count=0;count<number.length;count++) {
+			System.out.println("Enter the number");
+			number[count]=scn.nextInt();
+			
+		}
+		Arrays.sort(number);
+		System.out.println("Minimum:"+number[0]);
+		System.out.println("Maxmimum: "+number[9]);
+		
+		int total=0;
+		for(int element:number) {
+			if(element%4==0) {
+				total=total+element;
+			}
+		}
+		System.out.println("Total: "+total);
+	
+	for(int count=(number.length-1);count>0;count--) {
+		System.out.println(number[count]);
+		
+	}
+
+}
+}
+
